@@ -1,1 +1,1 @@
-(set-face-attribute 'default nil :font "Envy Code R-18")
+(add-to-list 'default-frame-alist '(font . "Envy Code R-18"))
