@@ -9,5 +9,6 @@
 (define-key ac-completing-map "\r" 'ac-complete)
 
 (global-set-key (kbd "C-x ,") 'fixup-whitespace)
+(global-set-key (kbd "C-x ;") 'delete-indentation)
 (global-set-key (kbd "C-:") 'undo-tree-visualize)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
