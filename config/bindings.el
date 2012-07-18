@@ -12,3 +12,5 @@
 (global-set-key (kbd "C-x ;") 'delete-indentation)
 (global-set-key (kbd "C-:") 'undo-tree-visualize)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+(global-set-key (kbd "C-c SPC") 'ace-jump-word-mode)
