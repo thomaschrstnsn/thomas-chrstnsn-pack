@@ -14,3 +14,9 @@
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-word-mode)
+
+;; steve yegge is right about everthing - https://sites.google.com/site/steveyegge2/effective-emacs
+;;(global-set-key (kbd "C-w") 'backward-kill-word)
+(global-set-key (kbd "C-w") 'paredit-backward-kill-word)
+(global-set-key (kbd "C-x C-k") 'kill-region)
+(global-set-key (kbd "C-c C-k") 'kill-region)
