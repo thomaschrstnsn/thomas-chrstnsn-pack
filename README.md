@@ -1,4 +1,4 @@
-## Thomas Christensens personalized emacs-live config-pack
+## Thomas Christensen's personalized emacs-live config-pack
 
 Best used with a `~/.emacs-live.el` containing:
 
