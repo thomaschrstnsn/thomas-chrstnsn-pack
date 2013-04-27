@@ -12,3 +12,17 @@
 (setq org-mobile-inbox-for-pull "~/org/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Desktop/Dropbox/Apps/MobileOrg")
+
+(setq org-log-done 'time)
+
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "VERIFICATION" "|"  "DONE" "FAIL" "DELEGATED" "CANCELLED")))
+
+(setq org-todo-keyword-faces
+      '(("TODO"  . (:foreground "firebrick2" :weight bold))
+        ("IN-PROGRESS"  . (:foreground "olivedrab" :weight bold))
+        ("VERIFICATION"  . (:foreground "sienna" :weight bold))
+        ("DONE"  . (:foreground "forestgreen" :weight bold))
+        ("DELEGATED"  . (:foreground "dimgrey" :weight bold))
+        ("FAILED"  . (:foreground "steelblue" :weight bold))
+        ("CANCELED"  . shadow)))
