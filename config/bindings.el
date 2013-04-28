@@ -23,3 +23,10 @@
 (global-set-key (kbd "C-w") 'paredit-backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "C-c C-k") 'kill-region)
+
+(global-set-key (kbd "C-c f") 'find-file-in-project)
+
+(global-set-key (kbd "M-n") 'smart-symbol-go-forward)
+(global-set-key (kbd "M-p") 'smart-symbol-go-backward)
+
+(global-set-key (kbd "C-c C-n") 'rename-current-buffer-file)
