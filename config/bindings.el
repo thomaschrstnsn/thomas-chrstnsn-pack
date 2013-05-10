@@ -1,6 +1,10 @@
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+(setq mac-control-modifier 'control)
+
 (define-key ac-completing-map "\r" 'ac-complete)
 
 (global-set-key (kbd "C-x ,") 'fixup-whitespace)
