@@ -4,15 +4,17 @@ Best used with a `~/.emacs-live.el` containing:
 
 ```elisp
 (live-use-packs '(live/foundation-pack
-                ; live/colour-pack
+                ; live/colour-pack ;; skipped to allow embedded solarized-dark theme to load
                   live/clojure-pack
-                  live-lang-pack
+                  live/lang-pack
                   live/power-pack))
 
-(live-add-packs '(~/src/thomas-chrstnsn-pack
-                  ~/src/solarized-pack))
+(live-add-packs '(~/src/thomas-chrstnsn-pack)
 ```
 
-Where `~/src/solarized-pack` is a checkout of http://github.com/siancu/solarized-pack
+### Contains:
+* Solarized dark color-theme
+* Powerline
+* My prefered settings
 
 Enjoy.

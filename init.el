@@ -4,3 +4,5 @@
 (live-load-config-file "org.el")
 
 (live-load-config-file "bindings.el")
+(live-load-config-file "solarized.el")
+(live-load-config-file "powerline.el")
