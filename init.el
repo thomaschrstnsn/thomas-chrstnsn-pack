@@ -2,7 +2,7 @@
 (live-load-config-file "gui.el")
 (live-load-config-file "buffers.el")
 (live-load-config-file "org.el")
-
+(live-load-config-file "clojure.el")
 (live-load-config-file "bindings.el")
 (live-load-config-file "clean-mode-line.el")
 (live-load-config-file "solarized.el")
