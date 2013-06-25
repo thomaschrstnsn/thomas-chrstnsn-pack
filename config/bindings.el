@@ -20,7 +20,6 @@
 ;; steve yegge is right about everthing - https://sites.google.com/site/steveyegge2/effective-emacs
 ;;(global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-w") 'paredit-backward-kill-word)
-(global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "C-c C-k") 'kill-region)
 
 (global-set-key (kbd "C-c f") 'find-file-in-project)
@@ -55,15 +54,3 @@
 (eval-after-load "paredit"
   '(define-key paredit-mode-map (kbd "C-c C-d")
      'paredit-duplicate-after-point))
-
-(defun eval-and-replace ()
-  "Replace the preceding sexp with its value."
-  (interactive)
-  (backward-kill-sexp)
-  (condition-case nil
-      (prin1 (eval (read (current-kill 0)))
-             (current-buffer))
-    (error (message "Invalid expression")
-           (insert (current-kill 0)))))
-
-(global-set-key (kbd "C-c e") 'eval-and-replace)
