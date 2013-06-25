@@ -17,6 +17,9 @@
 (global-set-key (kbd "M-<") 'other-frame)
 (global-set-key (kbd "M-h") 'ns-do-hide-emacs)
 
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-'") 'er/expand-region)
+
 ;; steve yegge is right about everthing - https://sites.google.com/site/steveyegge2/effective-emacs
 ;;(global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-w") 'paredit-backward-kill-word)
