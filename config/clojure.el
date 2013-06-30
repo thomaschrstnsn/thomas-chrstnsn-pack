@@ -1,1 +1,15 @@
 (setq nrepl-port "1234")
+
+(defun nrepl-reset ()
+  (interactive)
+  (set-buffer "*nrepl*")
+  (goto-char (point-max))
+  (insert "(user/reset)")
+  (nrepl-return))
+
+(defun nrepl-refresh ()
+  (interactive)
+  (set-buffer "*nrepl*")
+  (goto-char (point-max))
+  (insert "(clojure.tools.namespace.repl/refresh)")
+  (nrepl-return))
