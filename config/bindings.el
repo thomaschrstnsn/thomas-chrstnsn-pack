@@ -55,7 +55,7 @@
   (exchange-point-and-mark))
 
 (eval-after-load "paredit"
-  '(define-key paredit-mode-map (kbd "C-c C-d")
+  '(define-key paredit-mode-map (kbd "C-c d d")
      'paredit-duplicate-after-point))
 
 (global-set-key (kbd "C-,")   'nrepl-reset)
