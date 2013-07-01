@@ -58,5 +58,5 @@
   '(define-key paredit-mode-map (kbd "C-c C-d")
      'paredit-duplicate-after-point))
 
-(global-set-key (kbd "C-c r") 'nrepl-reset)
-(global-set-key (kbd "C-c R") 'nrepl-refresh)
+(global-set-key (kbd "C-,")   'nrepl-reset)
+(global-set-key (kbd "C-M-,") 'nrepl-refresh)
