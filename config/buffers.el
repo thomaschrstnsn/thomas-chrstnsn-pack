@@ -4,6 +4,8 @@
 
 (setq global-auto-revert-mode 1)
 
+(setq vc-follow-symlinks 't)
+
 (defun rename-current-buffer-file ()
   "Renames current buffer and file it is visiting."
   (interactive)
