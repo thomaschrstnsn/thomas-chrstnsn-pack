@@ -1,9 +1,10 @@
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
+(setq mac-control-modifier 'control)
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
-(setq mac-control-modifier 'control)
+(setq ns-function-modifier 'hyper)
 
 (define-key ac-completing-map "\r" 'ac-complete)
 
@@ -20,7 +21,7 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-'") 'er/expand-region)
 
-;; steve yegge is right about everthing - https://sites.google.com/site/steveyegge2/effective-emacs
+;; steve yegge is right about everything - https://sites.google.com/site/steveyegge2/effective-emacs
 ;;(global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-w") 'paredit-backward-kill-word)
 (global-set-key (kbd "C-c C-k") 'kill-region)
@@ -31,6 +32,12 @@
 (global-set-key (kbd "M-p") 'smart-symbol-go-backward)
 
 (global-set-key (kbd "C-c C-n") 'rename-current-buffer-file)
+
+(global-set-key (kbd "C-,")   'nrepl-reset)
+(global-set-key (kbd "C-M-,") 'nrepl-refresh)
+
+(global-set-key (kbd "H-j") 'nrepl-jack-in)
+(global-set-key (kbd "H-k") 'nrepl-quit)
 
 ;; Duplicate sexp
 (defun paredit-duplicate-after-point
@@ -57,6 +64,3 @@
 (eval-after-load "paredit"
   '(define-key paredit-mode-map (kbd "C-c d d")
      'paredit-duplicate-after-point))
-
-(global-set-key (kbd "C-,")   'nrepl-reset)
-(global-set-key (kbd "C-M-,") 'nrepl-refresh)
