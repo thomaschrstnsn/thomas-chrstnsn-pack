@@ -31,13 +31,27 @@
 (global-set-key (kbd "M-n") 'smart-symbol-go-forward)
 (global-set-key (kbd "M-p") 'smart-symbol-go-backward)
 
-(global-set-key (kbd "C-c C-n") 'rename-current-buffer-file)
-
 (global-set-key (kbd "C-,")   'nrepl-reset)
 (global-set-key (kbd "C-M-,") 'nrepl-refresh)
 
 (global-set-key (kbd "H-j") 'nrepl-jack-in)
 (global-set-key (kbd "H-k") 'nrepl-quit)
+(global-set-key (kbd "H-r") (lambda ()
+                              (interactive)
+                              (if (equal (buffer-name) "*nrepl*")
+                                  (switch-to-prev-buffer)
+                                (switch-to-buffer "*nrepl*"))))
+
+(defun tc-copy-whole-line ()
+  "Clone current line"
+  (interactive)
+  (kill-whole-line)
+  (yank)
+  (yank)
+  (previous-line))
+
+(global-set-key (kbd "H-x") 'kill-whole-line)
+(global-set-key (kbd "H-d") 'tc-copy-whole-line)
 
 ;; Duplicate sexp
 (defun paredit-duplicate-after-point
