@@ -13,3 +13,8 @@
   (goto-char (point-max))
   (insert "(clojure.tools.namespace.repl/refresh)")
   (nrepl-return))
+
+(live-add-pack-lib "helm")
+(live-add-pack-lib "clojure-cheatsheet")
+(require 'helm-config)
+(require 'clojure-cheatsheet)

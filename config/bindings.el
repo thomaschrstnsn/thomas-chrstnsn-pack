@@ -52,6 +52,7 @@
 
 (global-set-key (kbd "H-x") 'kill-whole-line)
 (global-set-key (kbd "H-d") 'tc-copy-whole-line)
+(global-set-key (kbd "H-c") 'clojure-cheatsheet)
 
 ;; Duplicate sexp
 (defun paredit-duplicate-after-point

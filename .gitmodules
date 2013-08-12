@@ -4,3 +4,9 @@
 [submodule "lib/powerline"]
 	path = lib/powerline
 	url = https://github.com/milkypostman/powerline
+[submodule "lib/clojure-cheatsheet"]
+	path = lib/clojure-cheatsheet
+	url = https://github.com/krisajenkins/clojure-cheatsheet
+[submodule "lib/helm"]
+	path = lib/helm
+	url = https://github.com/emacs-helm/helm
