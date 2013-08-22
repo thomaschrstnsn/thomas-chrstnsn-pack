@@ -1,5 +1,11 @@
 (setq nrepl-port "1234")
 
+;; remove the "silly" font-hack for #{:a} => ∈{:a}
+(font-lock-remove-keywords 'clojure-mode `(("\\(#\\){"
+                     (0 (progn (compose-region (match-beginning 1)
+                                               (match-end 1) "∈")
+                               nil)))))
+
 (defun nrepl-reset ()
   (interactive)
   (set-buffer "*nrepl*")
