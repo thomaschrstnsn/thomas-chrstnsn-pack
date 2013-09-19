@@ -1,3 +1,4 @@
+(live-load-config-file "string.el")
 (live-load-config-file "filetypes.el")
 (live-load-config-file "gui.el")
 (live-load-config-file "buffers.el")

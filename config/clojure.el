@@ -6,19 +6,27 @@
                                                (match-end 1) "∈")
                                nil)))))
 
+(defun nrepl-switch-to-repl-buffer-and-eval (s)
+  (nrepl-switch-to-relevant-repl-buffer nil)
+  (goto-char (point-max))
+  (insert s)
+  (nrepl-return))
+
 (defun nrepl-reset ()
   (interactive)
-  (set-buffer "*nrepl*")
-  (goto-char (point-max))
-  (insert "(user/reset)")
-  (nrepl-return))
+  (nrepl-switch-to-repl-buffer-and-eval "(user/reset)"))
 
 (defun nrepl-refresh ()
   (interactive)
-  (set-buffer "*nrepl*")
-  (goto-char (point-max))
-  (insert "(clojure.tools.namespace.repl/refresh)")
-  (nrepl-return))
+  (nrepl-switch-to-repl-buffer-and-eval "(clojure.tools.namespace.repl/refresh)"))
+
+(defun nrepl-toggle-repl-buffer ()
+  (interactive)
+  (if (string/starts-with (buffer-name) "*nrepl")
+      (progn
+        (nrepl-switch-to-last-clojure-buffer)
+        (delete-other-windows))
+    (nrepl-switch-to-relevant-repl-buffer nil)))
 
 (live-add-pack-lib "helm")
 (live-add-pack-lib "clojure-cheatsheet")

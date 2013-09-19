@@ -33,14 +33,13 @@
 
 (global-set-key (kbd "C-,")   'nrepl-reset)
 (global-set-key (kbd "C-M-,") 'nrepl-refresh)
+(global-set-key (kbd "H-,")   'nrepl-reset)
+(global-set-key (kbd "H-M-,") 'nrepl-refresh)
 
 (global-set-key (kbd "H-j") 'nrepl-jack-in)
 (global-set-key (kbd "H-k") 'nrepl-quit)
-(global-set-key (kbd "H-r") (lambda ()
-                              (interactive)
-                              (if (equal (buffer-name) "*nrepl*")
-                                  (switch-to-prev-buffer)
-                                (switch-to-buffer "*nrepl*"))))
+
+(global-set-key (kbd "H--") 'nrepl-toggle-repl-buffer)
 
 (defun tc-copy-whole-line ()
   "Clone current line"
