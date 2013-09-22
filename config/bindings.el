@@ -31,8 +31,6 @@
 (global-set-key (kbd "M-n") 'smart-symbol-go-forward)
 (global-set-key (kbd "M-p") 'smart-symbol-go-backward)
 
-(global-set-key (kbd "C-,")   'nrepl-reset)
-(global-set-key (kbd "C-M-,") 'nrepl-refresh)
 (global-set-key (kbd "H-,")   'nrepl-reset)
 (global-set-key (kbd "H-M-,") 'nrepl-refresh)
 
