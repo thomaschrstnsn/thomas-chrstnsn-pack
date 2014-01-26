@@ -2,8 +2,6 @@
 (add-to-list 'default-frame-alist '(height . 45))
 (add-to-list 'default-frame-alist '(width . 135))
 
-(set-face-background 'git-gutter:unchanged "#073642")
-
 ; highlight current line, always
 (global-hl-line-mode 1)
 
