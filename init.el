@@ -6,5 +6,6 @@
 (live-load-config-file "clojure.el")
 (live-load-config-file "bindings.el")
 (live-load-config-file "clean-mode-line.el")
-(live-load-config-file "solarized.el")
-(live-load-config-file "powerline.el")
+(live-load-config-file "theme.el")
+
+(setq live-disable-zone 't)
