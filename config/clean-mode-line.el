@@ -11,7 +11,7 @@
 (eval-after-load "elisp-slime-nav" '(diminish 'elisp-slime-nav-mode))
 (eval-after-load "smartparens" '(diminish 'smartparens-mode))
 (eval-after-load "guide-key" '(diminish 'guide-key-mode))
-(eval-after-load "git-gutter" (diminish 'git-gutter-mode))
+(eval-after-load "git-gutter" '(diminish 'git-gutter-mode))
 
 (defmacro rename-modeline (package-name mode new-name)
   `(eval-after-load ,package-name
