@@ -19,3 +19,6 @@
 
 ;; show full path to current file
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
+
+(live-add-pack-lib "zoom-frm")
+(require 'zoom-frm)
