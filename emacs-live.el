@@ -1,11 +1,11 @@
-(live-use-packs '(live/foundation-pack
-                ; live/colour-pack ;; skipped to allow our solarized-dark theme to load
-                  live/clojure-pack
-                  live/lang-pack
-                  live/power-pack
-                  live/git-pack
-                  live/org-pack
-                  live/bindings-pack))
+(live-use-packs '(stable/foundation-pack
+                  stable/lang-pack
+                  stable/power-pack
+                  stable/git-pack
+                  stable/org-pack
+                  stable/clojure-pack
+                  stable/bindings-pack
+                  ;; skips stable/colour-pack to allow our solarized-dark theme to load
+                  ))
 
-; points to where you've cloned this repo
 (live-add-packs '(~/src/thomas-chrstnsn-pack))

@@ -1,4 +1,9 @@
-(setq nrepl-port "1234")
+(require 'cider)
+
+(setq cider-port "1234")
+
+(setq nrepl-hide-special-buffers t)
+(setq cider-repl-result-prefix ";; => ")
 
 ;; remove the "silly" font-hack for #{:a} => ∈{:a}
 (font-lock-remove-keywords 'clojure-mode `(("\\(#\\){"
@@ -6,29 +11,30 @@
                                                (match-end 1) "∈")
                                nil)))))
 
-(defun nrepl-switch-to-repl-buffer-and-eval (s)
-  (nrepl-switch-to-relevant-repl-buffer nil)
+(defun cider-switch-to-repl-buffer-and-eval (s)
+  (cider-switch-to-relevant-repl-buffer nil)
   (goto-char (point-max))
   (insert s)
-  (nrepl-return))
+  (cider-repl-return))
 
-(defun nrepl-reset ()
+(defun cider-reset ()
   (interactive)
-  (nrepl-switch-to-repl-buffer-and-eval "(user/reset)"))
+  (cider-switch-to-repl-buffer-and-eval "(user/reset)"))
 
-(defun nrepl-refresh ()
+(defun cider-refresh ()
   (interactive)
-  (nrepl-switch-to-repl-buffer-and-eval "(clojure.tools.namespace.repl/refresh)"))
+  (cider-switch-to-repl-buffer-and-eval "(clojure.tools.namespace.repl/refresh)"))
 
-(defun nrepl-toggle-repl-buffer ()
+(defun cider-toggle-repl-buffer ()
   (interactive)
-  (if (string/starts-with (buffer-name) "*nrepl")
+  (if (string/starts-with (buffer-name) "*cider")
       (progn
-        (nrepl-switch-to-last-clojure-buffer)
+        (cider-switch-to-last-clojure-buffer)
         (delete-other-windows))
-    (nrepl-switch-to-relevant-repl-buffer nil)))
+    (cider-switch-to-relevant-repl-buffer nil)))
 
 (live-add-pack-lib "helm")
-(live-add-pack-lib "clojure-cheatsheet")
 (require 'helm-config)
+
+(live-add-pack-lib "clojure-cheatsheet")
 (require 'clojure-cheatsheet)

@@ -31,13 +31,13 @@
 (global-set-key (kbd "M-n") 'smart-symbol-go-forward)
 (global-set-key (kbd "M-p") 'smart-symbol-go-backward)
 
-(global-set-key (kbd "H-,")   'nrepl-reset)
-(global-set-key (kbd "H-M-,") 'nrepl-refresh)
+(global-set-key (kbd "H-,")   'cider-reset)
+(global-set-key (kbd "H-M-,") 'cider-refresh)
 
-(global-set-key (kbd "H-j") 'nrepl-jack-in)
-(global-set-key (kbd "H-k") 'nrepl-quit)
+(global-set-key (kbd "H-j") 'cider-jack-in)
+(global-set-key (kbd "H-k") 'cider-quit)
 
-(global-set-key (kbd "H--") 'nrepl-toggle-repl-buffer)
+(global-set-key (kbd "H--") 'cider-toggle-repl-buffer)
 
 (defun tc-copy-whole-line ()
   "Clone current line"
