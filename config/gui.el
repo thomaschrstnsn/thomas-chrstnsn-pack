@@ -31,6 +31,3 @@
 ;; default frame sizes
 (add-to-list 'default-frame-alist '(height . 45))
 (add-to-list 'default-frame-alist '(width . 135))
-
-(live-add-pack-lib "zoom-frm")
-(require 'zoom-frm)
