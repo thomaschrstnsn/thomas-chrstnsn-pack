@@ -9,8 +9,6 @@
 * The excellent Emacs Live configuration bundle: http://overtone.github.io/emacs-live/
 
 ### Contains:
-* Solarized dark color-theme
-* Powerline
 * My prefered settings
 
 Enjoy.
