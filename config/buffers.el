@@ -1,6 +1,5 @@
 (setq-default fill-column 120)
 (set-language-environment "UTF-8")
-(blink-cursor-mode 1)
 
 (setq global-auto-revert-mode 1)
 
