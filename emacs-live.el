@@ -2,7 +2,6 @@
                   stable/colour-pack ;; skip it to allow a custom theme to load
                   stable/lang-pack
                   stable/power-pack
-                  stable/git-pack
                   stable/org-pack
                   stable/clojure-pack
                   stable/bindings-pack))
