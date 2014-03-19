@@ -10,3 +10,6 @@
 [submodule "lib/helm"]
 	path = lib/helm
 	url = https://github.com/emacs-helm/helm
+[submodule "lib/ido-vertical"]
+	path = lib/ido-vertical
+	url = https://github.com/gempesaw/ido-vertical-mode.el

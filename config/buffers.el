@@ -101,3 +101,8 @@ instead."
              (t (error "Invalid direction")))
             word)
         (error "No symbol found")))))
+
+(live-add-pack-lib "ido-vertical")
+(require 'ido-vertical-mode)
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
+(ido-vertical-mode 1)
