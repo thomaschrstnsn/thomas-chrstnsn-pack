@@ -13,11 +13,24 @@
     (tooltip-mode -1)
 
     ;; show full path to current file
-    (setq frame-title-format '(buffer-file-name "%f" ("%b")))
-    (raise-frame)))
+    (setq frame-title-format '(buffer-file-name "%f" ("%b")))))
 
 ;; Do this for initial frame...
 (my-make-frame-hook)
+
+(defun fontify-frame (frame)
+  (interactive)
+  (if window-system
+      (progn
+        (if (> (x-display-pixel-width) 2000)
+            (set-frame-parameter frame 'font "PragmataPro-19")
+         (set-frame-parameter frame 'font "PragmataPro-16")))))
+
+;; Fontify current frame
+(fontify-frame nil)
+
+;; Fontify any future frames
+(push 'fontify-frame after-make-frame-functions)
 
 ;; ...and for any subsequently created frame.
 (add-hook 'after-make-frame-functions
@@ -25,9 +38,6 @@
              (select-frame frame)
              (my-make-frame-hook)))
 
-;; ma' font
-(add-to-list 'default-frame-alist '(font . "PragmataPro-19"))
-
 ;; default frame sizes
 (add-to-list 'default-frame-alist '(height . 45))
-(add-to-list 'default-frame-alist '(width . 135))
+(add-to-list 'default-frame-alist '(width . 125))
