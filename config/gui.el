@@ -24,7 +24,7 @@
       (progn
         (if (> (x-display-pixel-width) 2000)
             (set-frame-parameter frame 'font "PragmataPro-19")
-         (set-frame-parameter frame 'font "PragmataPro-16")))))
+         (set-frame-parameter frame 'font "PragmataPro-17")))))
 
 ;; Fontify current frame
 (fontify-frame nil)
@@ -39,5 +39,5 @@
              (my-make-frame-hook)))
 
 ;; default frame sizes
-(add-to-list 'default-frame-alist '(height . 45))
-(add-to-list 'default-frame-alist '(width . 125))
+(add-to-list 'default-frame-alist '(height . 42))
+(add-to-list 'default-frame-alist '(width . 115))
