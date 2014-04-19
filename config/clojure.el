@@ -25,6 +25,10 @@
   (interactive)
   (cider-switch-to-repl-buffer-and-eval "(clojure.tools.namespace.repl/refresh)"))
 
+(defun cider-tests ()
+  (interactive)
+  (cider-switch-to-repl-buffer-and-eval "(user/run-tests)"))
+
 (defun cider-toggle-repl-buffer ()
   (interactive)
   (if (string/starts-with (buffer-name) "*cider")

@@ -33,6 +33,7 @@
 
 (global-set-key (kbd "H-,")   'cider-reset)
 (global-set-key (kbd "H-M-,") 'cider-refresh)
+(global-set-key (kbd "H-t")   'cider-tests)
 
 (global-set-key (kbd "H-j") 'cider-jack-in)
 (global-set-key (kbd "H-k") 'cider-quit)
