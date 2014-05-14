@@ -1,9 +1,3 @@
-[submodule "lib/solarized-emacs"]
-	path = lib/solarized-emacs
-	url = https://github.com/bbatsov/solarized-emacs.git
-[submodule "lib/powerline"]
-	path = lib/powerline
-	url = https://github.com/milkypostman/powerline
 [submodule "lib/clojure-cheatsheet"]
 	path = lib/clojure-cheatsheet
 	url = https://github.com/krisajenkins/clojure-cheatsheet
