@@ -23,8 +23,8 @@
   (if window-system
       (progn
         (if (> (x-display-pixel-width) 2000)
-            (set-frame-parameter frame 'font "PragmataPro-19")
-         (set-frame-parameter frame 'font "PragmataPro-17")))))
+            (set-frame-parameter frame 'font "M+_2m-19")
+         (set-frame-parameter frame 'font "M+_2m-17")))))
 
 ;; Fontify current frame
 (fontify-frame nil)
