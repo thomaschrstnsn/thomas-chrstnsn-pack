@@ -41,6 +41,8 @@
 
 (global-set-key (kbd "H--") 'cider-toggle-repl-buffer)
 
+(global-set-key (kbd "H-r") 'revert-all-buffers)
+
 (defun tc-copy-whole-line ()
   "Clone current line"
   (interactive)
