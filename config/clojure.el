@@ -1,4 +1,6 @@
 (require 'cider)
+(require 'cider-stacktrace)
+(require 'cider-inspector)
 
 (setq cider-port "1234")
 
