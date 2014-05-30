@@ -41,3 +41,6 @@
 ;; default frame sizes
 (add-to-list 'default-frame-alist '(height . 36))
 (add-to-list 'default-frame-alist '(width . 120))
+
+;; less than default
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
