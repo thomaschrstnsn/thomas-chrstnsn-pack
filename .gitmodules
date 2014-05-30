@@ -7,3 +7,6 @@
 [submodule "lib/ido-vertical"]
 	path = lib/ido-vertical
 	url = https://github.com/gempesaw/ido-vertical-mode.el
+[submodule "lib/projectile"]
+	path = lib/projectile
+	url = https://github.com/bbatsov/projectile
