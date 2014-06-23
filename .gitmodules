@@ -10,3 +10,6 @@
 [submodule "lib/projectile"]
 	path = lib/projectile
 	url = https://github.com/bbatsov/projectile
+[submodule "lib/ido-ubiquitous"]
+	path = lib/ido-ubiquitous
+	url = https://github.com/DarwinAwardWinner/ido-ubiquitous
