@@ -22,9 +22,12 @@
   (interactive)
   (if window-system
       (progn
-        (if (> (x-display-pixel-width) 2000)
-            (set-frame-parameter frame 'font "M+_2m-19")
-         (set-frame-parameter frame 'font "M+_2m-16")))))
+        (setq thchrstnsn/default-font "-apple-M+_2m-medium-normal-normal-*-16-*-*-*-m-0-iso10646-1")
+        (setq thchrstnsn/presentation-font "-apple-M+_2m-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
+        (when (> (x-display-pixel-width) 2000)
+          (setq thchrstnsn/default-font "-apple-M+_2m-medium-normal-normal-*-19-*-*-*-m-0-iso10646-1")
+          (setq thchrstnsn/presentation-font "-apple-M+_2m-medium-normal-normal-*-21-*-*-*-m-0-iso10646-1"))
+        (set-face-attribute 'default nil :font thchrstnsn/default-font))))
 
 ;; Fontify current frame
 (fontify-frame nil)
