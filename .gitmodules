@@ -13,6 +13,6 @@
 [submodule "lib/ido-ubiquitous"]
 	path = lib/ido-ubiquitous
 	url = https://github.com/DarwinAwardWinner/ido-ubiquitous
-[submodule "lib/spacegray-theme"]
-	path = lib/spacegray-theme
-	url = https://github.com/bruce/emacs-spacegray-theme
+[submodule "lib/zenburn-theme"]
+	path = lib/zenburn-theme
+	url = https://github.com/bbatsov/zenburn-emacs

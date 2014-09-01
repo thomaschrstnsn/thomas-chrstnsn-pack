@@ -8,24 +8,27 @@
 ;; (color-theme-cyberpunk)
 
 (live-add-pack-lib "themes")
-(live-add-pack-lib "spacegray-theme")
+(live-add-pack-lib "zenburn-theme")
 
 (require 'prez-theme)
-(require 'spacegray-theme)
+(require 'zenburn-theme)
+
+(setq thchrstnsn/presentation-theme 'prez)
+(setq thchrstnsn/default-theme 'zenburn)
 
 (defun use-presentation-theme ()
   (interactive)
   (print "using presentation")
-  (disable-theme 'spacegray)
-  (load-theme 'prez t)
+  (disable-theme thchrstnsn/default-theme)
+  (load-theme thchrstnsn/presentation-theme t)
   (when (boundp 'thchrstnsn/presentation-font)
     (set-face-attribute 'default nil :font thchrstnsn/presentation-font)))
 
 (defun use-default-theme ()
   (interactive)
   (print "using default-theme")
-  (disable-theme 'prez)
-  (load-theme 'spacegray t)
+  (disable-theme thchrstnsn/presentation-theme)
+  (load-theme thchrstnsn/default-theme t)
   (when (boundp 'thchrstnsn/default-font)
     (set-face-attribute 'default nil :font thchrstnsn/default-font)))
 
@@ -37,8 +40,6 @@
 
 (global-set-key (kbd "H-p") 'toggle-presentation-mode)
 
-;; don't ask - seems to resolve stupid highlight current line issue (foreground ~= background)
-(use-presentation-theme)
 (use-default-theme)
 
 (provide 'theme)
