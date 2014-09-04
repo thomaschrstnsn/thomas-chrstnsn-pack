@@ -13,6 +13,20 @@
                                                (match-end 1) "∈")
                                nil)))))
 
+;; om-tools' defcomponent makes these available without reify, help indentation
+;; todo: should really learn how to iterate a collection in elisp ;-)
+(put-clojure-indent 'render 1)
+(put-clojure-indent 'render-state 1)
+(put-clojure-indent 'init-state 1)
+(put-clojure-indent 'will-mount 1)
+(put-clojure-indent 'did-mount 1)
+(put-clojure-indent 'should-update 1)
+(put-clojure-indent 'will-receive-props 1)
+(put-clojure-indent 'will-update 1)
+(put-clojure-indent 'did-update 1)
+(put-clojure-indent 'display-name 1)
+(put-clojure-indent 'will-unmount 1)
+
 (defun cider-switch-to-repl-buffer-and-eval (s)
   (cider-switch-to-relevant-repl-buffer nil)
   (goto-char (point-max))
