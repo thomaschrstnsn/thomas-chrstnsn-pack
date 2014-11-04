@@ -16,3 +16,6 @@
 [submodule "lib/zenburn-theme"]
 	path = lib/zenburn-theme
 	url = https://github.com/bbatsov/zenburn-emacs
+[submodule "lib/fsharpbinding"]
+	path = lib/fsharpbinding
+	url = git://github.com/fsharp/fsharpbinding.git
