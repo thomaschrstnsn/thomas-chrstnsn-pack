@@ -1,10 +1,10 @@
-(defvar thch-config-dir (expand-file-name "config" prelude-personal-dir)
-  "The primary configuration directory for thch")
+(defvar thch-config-dir (expand-file-name "config" thch-root-dir)
+  "The primary configuration directory for thomas-chrstnsn-pack")
 
 (add-to-list 'load-path thch-config-dir)
 
-(defvar thch-lib-dir (expand-file-name "lib" prelude-personal-dir)
-  "The external library directory for thch")
+(defvar thch-lib-dir (expand-file-name "lib" thch-root-dir)
+  "The external library directory for thomas-chrstnsn-pack")
 
 (add-to-list 'load-path thch-lib-dir)
 

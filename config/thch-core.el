@@ -1,4 +1,7 @@
-(message "loading thch-core")
+(defun thch-message (msg &rest add)
+  (apply 'message (concat " ==thch==> " msg) add))
+
+(thch-message "loading thch-core")
 
 (setq prelude-guru nil)
 
@@ -9,21 +12,20 @@
   "*List of files that reported errors when loaded via safe-load")
 
 (defun safe-load (file &optional noerror nomessage nosuffix)
-  "Load a file.  If error when loading, report back, wait for
-   a key stroke then continue on"
+  "Load a file. Checking for errors."
   (interactive "f")
   (condition-case nil (load file noerror nomessage nosuffix)
     (error
      (progn
        (setq safe-load-error-list  (concat safe-load-error-list  " " file))
-       (message "****** Error loading %s" safe-load-error-list )
        nil))))
 
 (defun safe-load-check ()
-  "Check for any previous safe-load loading errors.  (safe-load.el)"
+  "Check for any previous safe-load loading errors."
   (interactive)
   (if (string-equal safe-load-error-list "") ()
-    (message (concat "****** error loading: " safe-load-error-list))))
+    (thch-message (concat "ERROR: safe-load errors experienced for"
+                          safe-load-error-list))))
 
 (defun string/starts-with (s arg)
   "returns non-nil if string S starts with ARG.  Else nil."
@@ -33,4 +35,4 @@
 
 (provide 'thch-core)
 
-(message "thch-core loaded...")
+(thch-message "thch-core loaded...")
