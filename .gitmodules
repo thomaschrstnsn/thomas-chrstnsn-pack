@@ -1,1 +1,7 @@
 
+[submodule "lib/purescript-mode"]
+	path = lib/purescript-mode
+	url = https://github.com/dysinger/purescript-mode
+[submodule "lib/purscheck"]
+	path = lib/purscheck
+	url = https://github.com/spion/purscheck

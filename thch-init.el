@@ -20,6 +20,7 @@
 (safe-load "thch-clojure.el")
 (safe-load "thch-org.el")
 (safe-load "thch-haskell.el")
+(safe-load "thch-purescript.el")
 
 (safe-load "thch-bindings.el")
 
