@@ -13,7 +13,9 @@
     (tooltip-mode -1)
 
     ;; show full path to current file
-    (setq frame-title-format '(buffer-file-name "%f" ("%b")))))
+    (setq frame-title-format '(buffer-file-name "%f" ("%b"))))
+  (when (not window-system)
+    (menu-bar-mode -1)))
 
 ;; Do this for initial frame...
 (my-make-frame-hook)
