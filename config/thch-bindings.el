@@ -13,6 +13,9 @@
 
 (global-set-key (kbd "C-'") 'er/expand-region)
 
+(global-set-key (kbd "<home>") 'prelude-move-beginning-of-line)
+(global-set-key (kbd "<end>") 'move-end-of-line)
+
 ;; steve yegge is right about everything - https://sites.google.com/site/steveyegge2/effective-emacs
 (global-set-key (kbd "C-w") 'backward-kill-word)
 ;;(global-set-key (kbd "C-w") 'paredit-backward-kill-word)
