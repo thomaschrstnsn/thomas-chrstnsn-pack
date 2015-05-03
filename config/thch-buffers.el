@@ -1,4 +1,5 @@
-(setq-default fill-column 120)
+(setq-default fill-column 105)
+(setq whitespace-line-column 105)
 (set-language-environment "UTF-8")
 
 (setq global-auto-revert-mode 1)
