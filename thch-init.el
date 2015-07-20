@@ -10,6 +10,9 @@
 
 (load "thch-core.el")
 
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+
 (safe-load "thch-prelude-modules.el")
 
 (safe-load "thch-gui.el")
@@ -21,6 +24,7 @@
 (safe-load "thch-org.el")
 (safe-load "thch-haskell.el")
 (safe-load "thch-purescript.el")
+(safe-load "thch-elm.el")
 
 (safe-load "thch-bindings.el")
 
