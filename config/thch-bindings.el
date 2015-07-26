@@ -8,6 +8,8 @@
 (global-set-key (kbd "C-:") 'undo-tree-visualize)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+(global-set-key (kbd "C-z") 'undo-tree-undo)
+
 (global-set-key (kbd "M-<") 'other-frame)
 (global-set-key (kbd "M-h") 'ns-do-hide-emacs)
 
