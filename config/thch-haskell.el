@@ -1,9 +1,7 @@
 (setq haskell-font-lock-symbols 'unicode)
 
-;; I comment out the line:
-;;     (cons "()" (decode-char 'ucs #X2205))
-;; in haskell-font-lock.el
-;; TODO: figure out how to do the above programatically
+;; remove irritating symbol expansion
+(setq haskell-font-lock-symbols-alist (remove '("()" . "∅") haskell-font-lock-symbols-alist))
 
 (prelude-require-packages '(hi2 hindent))
 ;; better haskell indents
@@ -12,13 +10,11 @@
 ;; (add-hook 'haskell-mode-hook #'hindent-mode)
 ;; (setq hindent-style "johan-tibell")
 
-;; (add-hook 'haskell-mode-hook 'structured-haskell-mode)
-
 ;; cabal installs:
 ;;  hindent
 ;;  hasktags
 ;;  ghc-mod
-;;  structured-haskell-mode
+;;  structured-haskell-mode -- see below:
 
 ;;;; Structured Haskell Mode (SHM)
 ;; Currently shm is not available on melpa, so...
