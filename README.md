@@ -6,7 +6,8 @@
 
 ### Installation
 * Install Emacs Prelude
-* Copy thch.el into `~/.emacs.d/personal` and edit it, following the instructions there
+* Copy `theme.el` into `~/.emacs.d/personal/preload`
+* Copy `thch.el` into `~/.emacs.d/personal` and edit it, following the instructions there
 * Start emacs
 
 ### Contains:

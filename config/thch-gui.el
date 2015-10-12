@@ -13,9 +13,14 @@
     (tooltip-mode -1)
 
     ;; show full path to current file
-    (setq frame-title-format '(buffer-file-name "%f" ("%b"))))
+    (setq frame-title-format '(buffer-file-name "%f" ("%b")))
+
+    (when prelude-theme
+      (load-theme prelude-theme t)))
   (when (not window-system)
     (menu-bar-mode -1)))
+
+(prelude-require-package thch-theme-package)
 
 ;; Do this for initial frame...
 (my-make-frame-hook)
@@ -24,7 +29,7 @@
   (interactive)
   (if window-system
       (progn
-        (setq thchrstnsn/default-font "-apple-M+_2m-medium-normal-normal-*-16-*-*-*-m-0-iso10646-1")
+        (setq thchrstnsn/default-font "-apple-M+_2m-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
         (setq thchrstnsn/presentation-font "-apple-M+_2m-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
         (when (> (x-display-pixel-width) 2000)
           (setq thchrstnsn/default-font "-apple-M+_2m-medium-normal-normal-*-19-*-*-*-m-0-iso10646-1")
