@@ -39,6 +39,8 @@
 
 (global-set-key (kbd "H-r") 'revert-all-buffers)
 
+(global-set-key (kbd "M-<") 'prelude-goto-symbol)
+
 (defun tc-copy-whole-line ()
   "Clone current line"
   (interactive)
