@@ -18,7 +18,8 @@
             (define-key interactive-haskell-mode-map (kbd "M-.") 'haskell-mode-goto-loc)
             (define-key interactive-haskell-mode-map (kbd "M-,") 'xref-pop-marker-stack)
             (define-key interactive-haskell-mode-map (kbd "C-c C-t") 'haskell-mode-show-type-at)
-            (define-key interactive-haskell-mode-map (kbd "C-c C-u") 'haskell-mode-find-uses)))
+            (define-key interactive-haskell-mode-map (kbd "C-c C-u") 'haskell-mode-find-uses)
+            (define-key interactive-haskell-mode-map (kbd "C-c C-k") 'kill-region)))
 
 ;; nice indents of current decl using M-q, requires hindent installed in cabal
 ;;(add-hook 'haskell-mode-hook #'hindent-mode)
