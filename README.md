@@ -2,7 +2,7 @@
 
 ### Depends on:
 * Emacs Prelude: https://github.com/bbatsov/prelude
-* M2 fonts: http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/index-en.html
+* PragmataPro fonts: http://www.fsd.it/fonts/pragmatapro.htm
 
 ### Installation
 * Install Emacs Prelude
