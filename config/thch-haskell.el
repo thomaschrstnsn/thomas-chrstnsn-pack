@@ -11,9 +11,10 @@
 (add-hook 'haskell-mode-hook
           (lambda ()
             ;; install (from source): https://github.com/chrisdone/ghci-ng
-            (setq haskell-process-type 'cabal-repl)
-            (setq haskell-process-args-cabal-repl
-                  '("--ghc-option=-ferror-spans" "--with-ghc=ghci-ng"))
+            (setq haskell-process-wrapper-function
+                  (lambda (args)
+                    (append args (list "--with-ghc" "ghci-ng"))))
+            (setq haskell-process-suggest-remove-import-lines 't)
 
             (define-key interactive-haskell-mode-map (kbd "M-.") 'haskell-mode-goto-loc)
             (define-key interactive-haskell-mode-map (kbd "M-,") 'xref-pop-marker-stack)
