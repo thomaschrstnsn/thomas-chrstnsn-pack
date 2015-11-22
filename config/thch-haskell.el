@@ -5,6 +5,11 @@
 
 (prelude-require-packages '(hi2 hindent))
 
+;; hlint and
+(thch-add-external-lib "hlint-refactor-mode")
+(require 'hlint-refactor-mode)
+(add-hook 'haskell-mode-hook 'hlint-refactor-mode)
+
 ;; better haskell indents
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
 
@@ -22,11 +27,9 @@
             (define-key interactive-haskell-mode-map (kbd "C-c C-u") 'haskell-mode-find-uses)
             (define-key interactive-haskell-mode-map (kbd "C-c C-k") 'kill-region)))
 
-;; nice indents of current decl using M-q, requires hindent installed in cabal
-;;(add-hook 'haskell-mode-hook #'hindent-mode)
-;; (setq hindent-style "johan-tibell")
-
 ;; cabal installs:
 ;;  hindent
+;;  hlint (>= 1.9.23)
+;;  apply-refact (for hlint apply refactoring to work)
 
 (provide 'thch-haskell)
