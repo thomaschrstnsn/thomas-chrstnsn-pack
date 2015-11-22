@@ -15,6 +15,9 @@
     ;; show full path to current file
     (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 
+    ;; bigger fringe
+    (fringe-mode '(10 . 0))
+
     (when prelude-theme
       (load-theme prelude-theme t)))
   (when (not window-system)
