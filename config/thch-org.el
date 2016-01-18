@@ -5,17 +5,34 @@
 (setq org-directory "~/org")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
+(setq thch-org-todo "☛ TODO")
+(setq thch-org-in-progress "▶ IN-PROGRESS")
+(setq thch-org-verification "◼ VERIFICATION")
+(setq thch-org-waiting "⌛ WAITING")
+(setq thch-org-done "✔ DONE")
+(setq thch-org-fail "✘ FAIL")
+(setq thch-org-delegated "✉☜ DELEGATED")
+(setq thch-org-cancelled "✘ CANCELLED")
+
 (setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "VERIFICATION" "WAITING" "|"  "DONE" "FAIL" "DELEGATED" "CANCELLED")))
+      `((sequence ,thch-org-todo
+                  ,thch-org-in-progress
+                  ,thch-org-verification
+                  ,thch-org-waiting
+                  "|"
+                  ,thch-org-done
+                  ,thch-org-fail
+                  ,thch-org-delegated
+                  ,thch-org-cancelled)))
 
 (setq org-todo-keyword-faces
-      '(("TODO"  . (:foreground "firebrick2" :weight bold))
-        ("IN-PROGRESS"  . (:foreground "olivedrab" :weight bold))
-        ("VERIFICATION"  . (:foreground "sienna" :weight bold))
-        ("WAITING"  . (:foreground "dimgrey" :weight italic))
-        ("DONE"  . (:foreground "forestgreen" :weight bold))
-        ("DELEGATED"  . (:foreground "dimgrey" :weight bold))
-        ("FAILED"  . (:foreground "steelblue" :weight bold))
-        ("CANCELED"  . shadow)))
+      `((,thch-org-todo . (:foreground "firebrick2" :weight bold))
+        (,thch-org-in-progress . (:foreground "olivedrab" :weight bold))
+        (,thch-org-verification . (:foreground "sienna" :weight bold))
+        (,thch-org-waiting . (:foreground "dimgrey" :weight italic))
+        (,thch-org-done . (:foreground "forestgreen" :weight bold))
+        (,thch-org-delegated . (:foreground "dimgrey" :weight bold))
+        (,thch-org-fail . (:foreground "steelblue" :weight bold))
+        (,thch-org-cancelled . shadow)))
 
 (provide 'thch-org)
