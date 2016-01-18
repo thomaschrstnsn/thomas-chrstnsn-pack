@@ -2,7 +2,7 @@
 
 ### Depends on:
 * Emacs Prelude: https://github.com/bbatsov/prelude
-* PragmataPro fonts: http://www.fsd.it/fonts/pragmatapro.htm
+* Iosevka font: https://be5invis.github.io/Iosevka/
 
 ### Installation
 * Install Emacs Prelude

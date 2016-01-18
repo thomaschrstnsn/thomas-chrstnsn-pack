@@ -32,11 +32,11 @@
   (interactive)
   (if window-system
       (progn
-        (setq thchrstnsn/default-font "-apple-PragmataPro-medium-normal-normal-*-16-*-*-*-m-0-iso10646-1")
-        (setq thchrstnsn/presentation-font "-apple-PragmataPro-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
+        (setq thchrstnsn/default-font "-*-Iosevka-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1")
+        (setq thchrstnsn/presentation-font "-*-Iosevka-normal-normal-normal-*-19-*-*-*-m-0-iso10646-1")
         (when (> (x-display-pixel-width) 2000)
-          (setq thchrstnsn/default-font "-apple-PragmataPro-medium-normal-normal-*-21-*-*-*-m-0-iso10646-1")
-          (setq thchrstnsn/presentation-font "-apple-PragmataPro-medium-normal-normal-*-21-*-*-*-m-0-iso10646-1"))
+          (setq thchrstnsn/default-font "-*-Iosevka-normal-normal-normal-*-21-*-*-*-m-0-iso10646-1")
+          (setq thchrstnsn/presentation-font "-*-Iosevka-normal-normal-normal-*-21-*-*-*-m-0-iso10646-1"))
         (unless (or (string= (frame-parameter nil 'font) thchrstnsn/default-font)
                     (string= (frame-parameter nil 'font) thchrstnsn/presentation-font))
                 (set-face-attribute 'default nil :font thchrstnsn/default-font)))))
